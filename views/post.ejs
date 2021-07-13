@@ -1,0 +1,14 @@
+<%- include("partials/header") -%>
+
+<h1> <%= title %> |
+  <button class="btn btn-primary" type="submit" name="button" data-value3="<%=index%>" data-value2="<%=content%>" data-value="<%=title%>" id="update" value="update">Update</button>
+  <form class="in-line" action="/delete" method="post">
+    <input class="none" type="text" name="postTitle" value="<%=title%>">
+    <input class="none" type="text" name="index" value="<%=index%>">
+    <button class="btn btn-primary" type="submit" name="button" id="delete" value="delete">Delete</button>
+  </form>
+</h1>
+
+<p> <%= content %> </p>
+
+<%- include("partials/footer") -%>
