@@ -40,7 +40,7 @@ class DailyJournal {
     }
 
     // var query = `INSERT INTO ${myUser.getUser()} VALUES ('${title}', '${content}')`;
-    var query = `INSERT INTO ${myUser.getUser()} VALUES ('Hello', 'How's it going!')`;
+    var query = `INSERT INTO ${myUser.getUser()} VALUES ("Hello", "Hows it going!")`;
     connection.query(query, (err, data, fields) => {
       if (err) throw err;
       console.log("1 record inserted");
