@@ -39,8 +39,7 @@ class DailyJournal {
       return;
     }
 
-    // var query = `INSERT INTO ${myUser.getUser()} VALUES ('${title}', '${content}')`;
-    var query = `INSERT INTO ${myUser.getUser()} VALUES ("Hello", "Hows it going!")`;
+    var query = `INSERT INTO ${myUser.getUser()} VALUES ("${title}", "${content}")`;
     connection.query(query, (err, data, fields) => {
       if (err) throw err;
       console.log("1 record inserted");
@@ -52,7 +51,7 @@ class DailyJournal {
       return;
     }
 
-    var sql = `UPDATE ${myUser.getUser()} SET title = '${title}', content = '${content}' WHERE title = '${oldTitle}'`;
+    var sql = `UPDATE ${myUser.getUser()} SET title = "${title}", content = "${content}" WHERE title = "${oldTitle}"`;
     connection.query(sql, function (err, result) {
       if (err) throw err;
       console.log(result.affectedRows + " record(s) updated");
@@ -64,7 +63,7 @@ class DailyJournal {
       return;
     }
 
-    var sql = `DELETE FROM ${myUser.getUser()} WHERE title = '${title}'`;
+    var sql = `DELETE FROM ${myUser.getUser()} WHERE title = "${title}"`;
     connection.query(sql, function (err, result) {
       if (err) throw err;
       console.log("Number of records deleted: " + result.affectedRows);
