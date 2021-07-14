@@ -10,7 +10,7 @@ class DailyJournal {
 
   getTable() {
     var tableExist = false;
-    var sql = "SHOW TABLES FROM `heroku_ca0de1e45d368cf` LIKE " + `"${myUser.getUser()}"`;
+    var sql = "SHOW TABLES FROM `YOUR_DATABASE` LIKE " + `"${myUser.getUser()}"`;
     con.connection.query(sql, (err, data, fields) => {
       if (err) throw err;
       if (Object.keys(data).length == 1) tableExist = true;
