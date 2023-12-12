@@ -8,10 +8,6 @@ as its database.
 
 After cloning repository into your own computer:
   1. run - npm i (to install node dependencies)
-  2. in modules/connect.js - reconfigure db_config to connect to your local mySQL database.
+  2. in modules/connect.js - reconfigure db_config to connect to your local MySQL database
   3. run - nodemon app.js
-  4. project will be hosted on 'localhost:3000'. Enjoy!
-  
-## View
-
-I currently hosting this project on Heroku -> https://murmuring-badlands-04497.herokuapp.com/
+  4. project will be hosted on 'localhost:3000'
